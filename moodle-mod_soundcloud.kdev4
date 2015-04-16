@@ -1,0 +1,4 @@
+[Project]
+Name=moodle-mod_soundcloud
+Manager=KDevGenericManager
+VersionControl=kdevgit
