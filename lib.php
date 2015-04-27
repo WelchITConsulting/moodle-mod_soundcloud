@@ -17,28 +17,28 @@
  */
 
 
-function _add_instance($instance)
+function soundcloud_add_instance($instance)
 {
-	global $DB;
-	
-	
-	return $instance->id;
+  global $DB;
+  
+  
+  return $instance->id;
 }
 
-function _update_instance($instance)
+function soundcloud_update_instance($instance)
 {
-	global $DB;
-	
-	return $DB->update_record("", $instance);
+  global $DB;
+  
+  return $DB->update_record("", $instance);
 }
 
-function _delete_instance($id)
+function soundcloud_delete_instance($id)
 {
-	global $DB;
-	
-	if (!$instance = $DB->get_record('', array('id' => $id)) {
-		return false;
-	}
-	
-	return $DB->delete_records('', array('id' => $instance->id);
+  global $DB;
+  
+  if (!$instance = $DB->get_record('soundcloud', array('id' => $id))) {
+    return false;
+  }
+  
+  return $DB->delete_records('soundcloud', array('id' => $instance->id));
 }

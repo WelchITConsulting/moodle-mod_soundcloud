@@ -16,12 +16,5 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- 
-defined('MOODLE_INTERNAL') || die();
+require_once($CFG->dirroot . '/mod/soundcloud/soundcloudlib.php');
 
-$moodle->version   = 2015041600;
-$module->requires  = 2013110500;
-$module->component = 'mod_soundcloud';
-$module->cron      = 0;
-$module->maturity  = MATURITY_BETA;
-$module->release   = '0.1.0 (Build: 2015041600)';

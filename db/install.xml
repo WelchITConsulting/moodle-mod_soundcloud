@@ -4,14 +4,15 @@
     xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
 >
   <TABLES>
-    <TABLE NAME="" COMMENT="">
+    <TABLE NAME="soundcloud" COMMENT="Stores the instance of the SoundCloud library in a course">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
         <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
         <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
         <FIELD NAME="intro" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
         <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
-        <FIELD NAME="type" TYPE="char" LENGTH="255" NOTNULL="true" DEFAULT="general" SEQUENCE="false" COMMENT="Forum type that will be used to display this forum. May be NULL for default type."/>
+
+	<FIELD NAME="type" TYPE="char" LENGTH="255" NOTNULL="true" DEFAULT="general" SEQUENCE="false" COMMENT="Forum type that will be used to display this forum. May be NULL for default type."/>
         <FIELD NAME="ratingscale" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="0 to disable ratings. Positive integer to use numeric 0..N scale. Negative number to select a scale by (negative) scale ID."/>
         <FIELD NAME="ratingfrom" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Time (in seconds since epoch). Users can only rate posts that are created on or after this time. 0 if no limit."/>
         <FIELD NAME="ratinguntil" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Time (in seconds since epoch). Users can only rate posts that were created before this time. 0 if no limit."/>
@@ -37,9 +38,21 @@
         <FIELD NAME="originalcmid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="If this forum is a reference to (clone of) a shared forum, this field is non-null and points to the original forum. (When this is set, other settings in this table are ignored.)"/>
         <FIELD NAME="gradingscale" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="grading scale"/>
         <FIELD NAME="canpostanon" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="This flag is set to 1 if the user can post anonymously as a moderator , 0 if not."/>
+	
+	<FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+	<FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
       </FIELDS>
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="soundcloud_posts" COMMENT="Files posted to the SoundCloud server">
+      <FIELDS>
+	<FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+	<FIELD NAME="soundcloud" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+	<KEY NAME="primary" TYPE="primary" FIELDS="id"/>
       </KEYS>
     </TABLE>
   </TABLES> 

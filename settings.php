@@ -16,12 +16,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- 
 defined('MOODLE_INTERNAL') || die();
 
-$moodle->version   = 2015041600;
-$module->requires  = 2013110500;
-$module->component = 'mod_soundcloud';
-$module->cron      = 0;
-$module->maturity  = MATURITY_BETA;
-$module->release   = '0.1.0 (Build: 2015041600)';
+if ($ADMIN->fulltree) {
+  require_once($CFG->dirroot . '/mod/soundcloud/lib.php');
+  
+  $settings->add(new admin_setting_configtext('soundcloud_',
+                 get_string('', 'mod_soundcloud'),
+                 get_string('', 'mod_soundcloud'), 0));
+  $settings->add(new admin_setting_configtext('soundcloud_',
+                 get_string('', 'mod_soundcloud'),
+                 get_string('', 'mod_soundcloud'), 0));
+}
