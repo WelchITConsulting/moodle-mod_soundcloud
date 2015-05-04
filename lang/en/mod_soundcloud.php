@@ -17,6 +17,11 @@
  */
 
 
-$string['modulename']           = '';
-$string['pluginname']           = '';
-$string['pluginadministration'] = ' administration';
+$string['modulename']               = 'SoundCloud Gallery';
+$string['modulenameplural']         = 'SoundCloud Galleries';
+$string['pluginname']               = 'soundcloud';
+$string['pluginadministration']     = 'SoundCloud administration';
+$string['soundcloudid']             = 'SoundCloud ID';
+$string['configsoundcloudid']       = 'The ID issued for the application on SoundCloud.';
+$string['soundcloudsecret']         = 'SoundCloud ID';
+$string['configsoundcloudsecret']   = 'The ID issued for the application on SoundCloud.';

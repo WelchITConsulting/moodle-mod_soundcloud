@@ -19,7 +19,7 @@
 
 $capabilities = array(
 
-    'mod/:addinstance' => array(
+    'mod/soundcloud:addinstance' => array(
         'riskbitmask'  => RISK_XSS,
         'captype'      => 'write',
         'contextlevel' => CONTEXT_COURSE,
@@ -28,16 +28,28 @@ $capabilities = array(
         ),
         'clonepermissionsfrom' => 'moodle/course:manageactivities'
     ),
-    
-    'mod/:view' => array(
+
+    'mod/soundcloud:view' => array(
         'captype'      => 'read',
         'contextlevel' => CONTEXT_MODULE,
         'legacy'       => array(
+            'guest'          => CAP_ALLOW,
             'student'        => CAP_ALLOW,
             'teacher'        => CAP_ALLOW,
             'editingteacher' => CAP_ALLOW,
             'coursecreator'  => CAP_ALLOW,
             'manager'        => CAP_ALLOW
+        )
+    ),
+
+    'mod/soundcloud:upload' => array(
+        'riskbitmask'  => RISK_XSS,
+        'captype'      => 'write',
+        'contextlevel' => CONTEXT_MODULE,
+        'legacy'       => array(
+            'coursecreator'    => CAP_ALLOW,
+            'creativeenquirer' => CAP_ALLOW,
+            'manager'          => CAP_ALLOW
         )
     )
 );

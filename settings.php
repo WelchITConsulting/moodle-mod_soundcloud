@@ -20,11 +20,11 @@ defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
   require_once($CFG->dirroot . '/mod/soundcloud/lib.php');
-  
-  $settings->add(new admin_setting_configtext('soundcloud_',
-                 get_string('', 'mod_soundcloud'),
-                 get_string('', 'mod_soundcloud'), 0));
-  $settings->add(new admin_setting_configtext('soundcloud_',
-                 get_string('', 'mod_soundcloud'),
-                 get_string('', 'mod_soundcloud'), 0));
+
+  $settings->add(new admin_setting_configtext('soundcloud_id',
+                 get_string('soundcloudid', 'mod_soundcloud'),
+                 get_string('configsoundcloudid', 'mod_soundcloud'), 0));
+  $settings->add(new admin_setting_configtext('soundcloud_secret',
+                 get_string('soundcloudsecret', 'mod_soundcloud'),
+                 get_string('configsoundcloudsecret', 'mod_soundcloud'), 0));
 }
