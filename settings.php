@@ -23,8 +23,10 @@ if ($ADMIN->fulltree) {
 
     $settings->add(new admin_setting_configtext('soundcloud_id',
                    get_string('clientid', 'soundcloud'),
-                   get_string('configclientid', 'soundcloud'), 0));
+                   get_string('configclientid', 'soundcloud'), '',
+                   PARAM_TEXT, 64));
     $settings->add(new admin_setting_configtext('soundcloud_secret',
                    get_string('clientsecret', 'soundcloud'),
-                   get_string('configclientsecret', 'soundcloud'), 0));
+                   get_string('configclientsecret', 'soundcloud'), '',
+                   PARAM_TEXT, 64));
 }
