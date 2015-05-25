@@ -37,7 +37,7 @@ class mod_soundcloud_mod_form extends moodleform_mod
         $mform->addRule('name', null, 'required', null, 'client');
         $mform->addRule('name', get_string('maximumchars', '', 255), 'maxlength', 255, 'client');
 
-        $this->add_intro_editor(true);
+        $this->add_intro_editor(false, get_string('description', 'soundcloud'));
         $mform->addHelpButton('introeditor', 'description', 'soundcloud');
 
         // Section for the SoundCloud access settings
@@ -45,21 +45,25 @@ class mod_soundcloud_mod_form extends moodleform_mod
 
         $mform->addElement('text', 'clientid', get_string('soundcloudid', 'soundcloud'), array('size' => '64'));
         $mform->setType('clientid', PARAM_TEXT);
+        $mform->addHelpButton('clientid', 'clientid', 'soundcloud');
         $mform->addRule('clientid', null, 'required', null, 'client');
         $mform->addRule('clientid', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');
 
         $mform->addElement('text', 'clientsecret', get_string('soundcloudsecret', 'soundcloud'), array('size' => '64'));
         $mform->setType('clientsecret', PARAM_TEXT);
+        $mform->addHelpButton('clientid', 'clientsecret', 'soundcloud');
         $mform->addRule('clientsecret', null, 'required', null, 'client');
         $mform->addRule('clientsecret', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');
 
         $mform->addElement('text', 'clientuser', get_string('soundclouduser', 'soundcloud'), array('size' => '64'));
         $mform->setType('clientuser', PARAM_TEXT);
+        $mform->addHelpButton('clientid', 'clientuser', 'soundcloud');
         $mform->addRule('clientuser', null, 'required', null, 'client');
         $mform->addRule('clientuser', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
 
         $mform->addElement('text', 'clientpwd', get_string('soundcloudpassword', 'soundcloud'), array('size' => '64'));
         $mform->setType('clientpwd', PARAM_TEXT);
+        $mform->addHelpButton('clientid', 'clientpwd', 'soundcloud');
         $mform->addRule('clientpwd', null, 'required', null, 'client');
         $mform->addRule('clientpwd', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
 

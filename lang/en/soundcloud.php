@@ -17,15 +17,19 @@
  */
 
 $string['description']              = 'Gallery description';
-$string['description_help']         = 'Provide a description to appear above the sound clips contained in this gallery.';
+$string['description_help']         = 'Provide a description which will appear above the sound clips contained in this gallery.';
 $string['modulename']               = 'SoundCloud Gallery';
 $string['modulename_help']          = 'Add a gallery of sound clips uploaded to a shared SoundCloud accounts.';
 $string['modulenameplural']         = 'SoundCloud Galleries';
 $string['pluginname']               = 'SoundCloud Gallery';
 $string['pluginadministration']     = 'SoundCloud administration';
 $string['soundcloud']               = 'SoundCloud';
-$string['soundcloudid']             = 'The ID issued for the application on SoundCloud.';
+$string['soundcloudid']             = 'SoundCloud client';
+$string['soundcloudid_help']        = 'The client detail provided by SoundCloud.';
 $string['soundcloudname']           = 'Gallery name';
-$string['soundcloudpassword']       = 'The password for the SoundCloud account.';
-$string['soundcloudsecret']         = 'The ID issued for the application on SoundCloud.';
-$string['soundclouduser']           = 'The username for the SoundCloud account.';
+$string['soundcloudpassword']       = 'SoundCloud account password';
+$string['soundcloudpassword_help']  = 'The password for the SoundCloud account containing the sound clips.';
+$string['soundcloudsecret']         = 'SoundCloud client secret';
+$string['soundcloudsecret_help']    = 'The client secret provided by SoundCloud.';
+$string['soundclouduser']           = 'SoundCloud account username';
+$string['soundclouduser_help']      = 'The username for the SoundCloud account containing the sound clips.';
