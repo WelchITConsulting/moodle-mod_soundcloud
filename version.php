@@ -19,7 +19,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$module->version   = 2015052300;
+$module->version   = 2015052500;
 $module->requires  = 2013110500;
 $module->component = 'mod_soundcloud';
 $module->cron      = 0;

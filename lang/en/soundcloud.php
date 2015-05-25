@@ -17,12 +17,14 @@
  */
 
 
+$string['description_help']         = 'Provide a description to appear above the sound clips contained in this gallery.';
 $string['modulename']               = 'SoundCloud Gallery';
+$string['modulename_help']          = 'Add a gallery of sound clips uploaded to a shared SoundCloud accounts.';
 $string['modulenameplural']         = 'SoundCloud Galleries';
 $string['pluginname']               = 'SoundCloud Gallery';
 $string['pluginadministration']     = 'SoundCloud administration';
 $string['soundcloud']               = 'SoundCloud';
-$string['soundcloudid']             = 'SoundCloud ID';
-$string['configsoundcloudid']       = 'The ID issued for the application on SoundCloud.';
-$string['soundcloudsecret']         = 'SoundCloud ID';
-$string['configsoundcloudsecret']   = 'The ID issued for the application on SoundCloud.';
+$string['soundcloudid']             = 'The ID issued for the application on SoundCloud.';
+$string['soundcloudpassword']       = 'The password for the SoundCloud account.';
+$string['soundcloudsecret']         = 'The ID issued for the application on SoundCloud.';
+$string['soundclouduser']           = 'The username for the SoundCloud account.';
