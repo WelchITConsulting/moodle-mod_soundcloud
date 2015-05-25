@@ -19,8 +19,24 @@
 require_once('../../config.php');
 require_once($CFG->dirroot . '/mod/soundcloud/locallib.php');
 
-$id = optional_param('id', null, PARAM_INT);
-$a  = optional_param('a', null, PARAM_INT);
+$id = optional_param('id', null, PARAM_INT);    // Course module ID
+$a  = optional_param('a', null, PARAM_INT);     // Gallery ID
+$p  = optional_param('p', 0, PARAM_INT);        // Page to show
+$s  = optional_param('s', '', PARAM_CLEAN);     // Search string
+
+$params = array();
+if ($id) {
+    $params['id'] = $id;
+} else {
+    $params['a'] = $a;
+}
+if ($p) {
+    $params['p'] = $p;
+}
+if ($s) {
+    $params['s'] = $s;
+}
+$PAGE->set_url('/mod/soundcloud/view.php', $params);
 
 if ($id) {
   if (!$cm = get_coursemodule_from_id('soundcloud', $id)) {
@@ -32,7 +48,7 @@ if ($id) {
   if (!$soundcloud = $DB->get_record('soundcloud', array('id' => $cm->instance))) {
     print_error('invalidcoursemodule');
   }
-} else {
+} else if ($a) {
   if (!$soundcloud = $DB->get_record('soundcloud', array('id' => $a))) {
     print_error('invalidcoursemodule');
   }
@@ -42,24 +58,20 @@ if ($id) {
   if (!$cm = get_coursemodule_from_instance('soundcloud', $soundcloud->id, $course->id)) {
     print_error('invalidcoursemodule');
   }
+} else {
+    print_error('missingparameter');
 }
 
 require_course_login($course, true, $cm);
 $context = context_module::instance($cm->id);
-
-$url = new moodle_url($CFG->wwwroot . '/mod/soundcloud/view.php');
-if (isset($id)) {
-  $url->param('id', $id);
-} else {
-  $url->param('a', $a);
-}
-
-$PAGE->set_url($url);
 $PAGE->set_context($context);
-$PAGE->set_title(format_string($soundcloud->name));
-$PAGE->set_heading(format_string($course->name));
+
+// Print header
+$PAGE->set_title($soundcloud->name);
+$PAGE->set_heading($course->fullname);
+
 echo $OUTPUT->header()
-   . $OUTPUT->heading(format_text($soundcloud->name))
+   . $OUTPUT->heading(format_text($soundcloud->name), 2)
    . ($soundcloud->intro ? $OUTPUT->box(format_module_intro('soundcloud', $soundcloud, $cm->id), 'generalbox', 'intro')
                          : '')
    . $OUTPUT->box_start('generalbox boxaligncenter boxwidthwide');

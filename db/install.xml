@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="mod/soundcloud/db" VERSION="20150525" COMMENT="SoundCloud provides a gallery of tracks uploaded to SoundCloud."
+<XMLDB PATH="mod/soundcloud/db" VERSION="2015052505" COMMENT="SoundCloud provides a gallery of tracks uploaded to SoundCloud."
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
 >
@@ -11,8 +11,6 @@
                 <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
                 <FIELD NAME="intro" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
                 <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
-                <FIELD NAME="clientid" TYPE="char" LENGTH="64" NOTNULL="true" SEQUENCE="false"/>
-                <FIELD NAME="clientsecret" TYPE="char" LENGTH="64" NOTNULL="true" SEQUENCE="false"/>
                 <FIELD NAME="clientuser" TYPE="char" LENGTH="64" NOTNULL="true" SEQUENCE="false"/>
                 <FIELD NAME="clientpwd" TYPE="char" LENGTH="64" NOTNULL="true" SEQUENCE="false"/>
                 <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
