@@ -18,8 +18,8 @@
 
 $string['clientid']                 = 'SoundCloud client';
 $string['clientid_help']            = 'The client detail provided by SoundCloud.';
-$string['clientpassword']           = 'SoundCloud account password';
-$string['clientpassword_help']      = 'The password for the SoundCloud account containing the sound clips.';
+$string['clientpwd']                = 'SoundCloud account password';
+$string['clientpwd_help']           = 'The password for the SoundCloud account containing the sound clips.';
 $string['clientsecret']             = 'SoundCloud client secret';
 $string['clientsecret_help']        = 'The client secret provided by SoundCloud.';
 $string['clientuser']               = 'SoundCloud account username';

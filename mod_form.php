@@ -61,7 +61,7 @@ class mod_soundcloud_mod_form extends moodleform_mod
         $mform->addRule('clientuser', null, 'required', null, 'client');
         $mform->addRule('clientuser', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
 
-        $mform->addElement('text', 'clientpwd', get_string('clientpassword', 'soundcloud'), array('size' => '64'));
+        $mform->addElement('text', 'clientpwd', get_string('clientpwd', 'soundcloud'), array('size' => '64'));
         $mform->setType('clientpwd', PARAM_TEXT);
         $mform->addHelpButton('clientpwd', 'clientpwd', 'soundcloud');
         $mform->addRule('clientpwd', null, 'required', null, 'client');
