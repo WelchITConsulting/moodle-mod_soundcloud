@@ -32,12 +32,62 @@ class mod_soundcloud_mod_form extends moodleform_mod
 
         $mform->addElement('header', 'general', get_string('general', 'form'));
 
-        $mform->addElement('text', 'name', get_string('name', 'mod_souncloud'), array('size' => '64'));
+        $mform->addElement('text', 'name', get_string('name', 'souncloud'), array('size' => '64'));
         $mform->setType('name', PARAM_TEXT);
         $mform->addRule('name', null, 'required', null, 'client');
+        $mform->addRule('name', get_string('maximumchars', '', 255), 'maxlength', 255, 'client');
 
-        $this->add_intro_editor(true, get_string('description', 'mod_soundcloud'));
-        $mform->addHelpButton('introeditor', 'description', 'mod_soundcloud');
-        
+        $this->add_intro_editor(true, get_string('description', 'soundcloud'));
+        $mform->addHelpButton('introeditor', 'description', 'soundcloud');
+
+        // Section for the SoundCloud access settings
+        $mform->addElement('header', 'soundcloud', get_string('soundcloud', 'soundcloud'));
+
+        $mform->addElement('text', 'clientid', get_string('', 'soundcloud'), array('size' => '64'));
+        $mform->setType('clientid', PARAM_TEXT);
+        $mform->addRule('clientid', null, 'required', null, 'client');
+        $mform->addRule('clientid', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');
+
+        $mform->addElement('text', 'clientsecret', get_string('', 'soundcloud'), array('size' => '64'));
+        $mform->setType('clientsecret', PARAM_TEXT);
+        $mform->addRule('clientsecret', null, 'required', null, 'client');
+        $mform->addRule('clientsecret', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');
+
+        $mform->addElement('text', 'clientuser', get_string('', 'soundcloud'), array('size' => '64'));
+        $mform->setType('clientuser', PARAM_TEXT);
+        $mform->addRule('clientuser', null, 'required', null, 'client');
+        $mform->addRule('clientuser', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
+
+        $mform->addElement('text', 'clientpwd', get_string('', 'soundcloud'), array('size' => '64'));
+        $mform->setType('clientpwd', PARAM_TEXT);
+        $mform->addRule('clientpwd', null, 'required', null, 'client');
+        $mform->addRule('clientpwd', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
+
+//        $mform->addElement('text', '', get_string('', 'mod_soundcloud'), array('size' => '64'));
+//        $mform->setType('name', PARAM_TEXT);
+//        $mform->addRule('', null, 'required', null, 'client');
+//        $mform->addRule('', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
+//
+//        $mform->addElement('text', '', get_string('', 'mod_soundcloud'), array('size' => '64'));
+//        $mform->setType('name', PARAM_TEXT);
+//        $mform->addRule('', null, 'required', null, 'client');
+//        $mform->addRule('', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
+//
+//        $mform->addElement('text', '', get_string('', 'mod_soundcloud'), array('size' => '64'));
+//        $mform->setType('name', PARAM_TEXT);
+//        $mform->addRule('', null, 'required', null, 'client');
+//        $mform->addRule('', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
+//
+//        $mform->addElement('text', '', get_string('', 'mod_soundcloud'), array('size' => '64'));
+//        $mform->setType('name', PARAM_TEXT);
+//        $mform->addRule('', null, 'required', null, 'client');
+//        $mform->addRule('', get_string('maximumchars', '', 64), 'maxlength', 64, 'client');
+
+
+        // Add standard elements
+        $this->standard_coursemodule_elements();
+
+        // Add standard buttons
+        $this->add_action_buttons();
     }
 }

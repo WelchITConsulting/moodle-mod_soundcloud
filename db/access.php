@@ -48,7 +48,6 @@ $capabilities = array(
         'contextlevel' => CONTEXT_MODULE,
         'legacy'       => array(
             'coursecreator'    => CAP_ALLOW,
-            'creativeenquirer' => CAP_ALLOW,
             'manager'          => CAP_ALLOW
         )
     )

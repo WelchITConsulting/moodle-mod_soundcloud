@@ -16,10 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- 
+
 defined('MOODLE_INTERNAL') || die();
 
-$moodle->version   = 2015041600;
+$module->version   = 2015052300;
 $module->requires  = 2013110500;
 $module->component = 'mod_soundcloud';
 $module->cron      = 0;

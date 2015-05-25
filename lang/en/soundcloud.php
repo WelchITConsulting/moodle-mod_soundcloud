@@ -19,8 +19,9 @@
 
 $string['modulename']               = 'SoundCloud Gallery';
 $string['modulenameplural']         = 'SoundCloud Galleries';
-$string['pluginname']               = 'soundcloud';
+$string['pluginname']               = 'SoundCloud Gallery';
 $string['pluginadministration']     = 'SoundCloud administration';
+$string['soundcloud']               = 'SoundCloud';
 $string['soundcloudid']             = 'SoundCloud ID';
 $string['configsoundcloudid']       = 'The ID issued for the application on SoundCloud.';
 $string['soundcloudsecret']         = 'SoundCloud ID';
