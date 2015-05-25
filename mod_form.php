@@ -43,7 +43,7 @@ class mod_soundcloud_mod_form extends moodleform_mod
         // Section for the SoundCloud access settings
         $mform->addElement('header', 'soundcloud', get_string('soundcloud', 'soundcloud'));
 
-        $mform->addElement('text', 'clientid', get_string('coundcloudid', 'soundcloud'), array('size' => '64'));
+        $mform->addElement('text', 'clientid', get_string('soundcloudid', 'soundcloud'), array('size' => '64'));
         $mform->setType('clientid', PARAM_TEXT);
         $mform->addRule('clientid', null, 'required', null, 'client');
         $mform->addRule('clientid', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');

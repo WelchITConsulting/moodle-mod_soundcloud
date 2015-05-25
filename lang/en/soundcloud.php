@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
+$string['description']              = 'Gallery description';
 $string['description_help']         = 'Provide a description to appear above the sound clips contained in this gallery.';
 $string['modulename']               = 'SoundCloud Gallery';
 $string['modulename_help']          = 'Add a gallery of sound clips uploaded to a shared SoundCloud accounts.';
@@ -25,6 +25,7 @@ $string['pluginname']               = 'SoundCloud Gallery';
 $string['pluginadministration']     = 'SoundCloud administration';
 $string['soundcloud']               = 'SoundCloud';
 $string['soundcloudid']             = 'The ID issued for the application on SoundCloud.';
+$string['soundcloudname']           = 'Gallery name';
 $string['soundcloudpassword']       = 'The password for the SoundCloud account.';
 $string['soundcloudsecret']         = 'The ID issued for the application on SoundCloud.';
 $string['soundclouduser']           = 'The username for the SoundCloud account.';
