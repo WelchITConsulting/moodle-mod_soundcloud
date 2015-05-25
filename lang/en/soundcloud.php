@@ -16,6 +16,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+$string['clientid']                 = 'SoundCloud client';
+$string['clientid_help']            = 'The client detail provided by SoundCloud.';
+$string['clientpassword']           = 'SoundCloud account password';
+$string['clientpassword_help']      = 'The password for the SoundCloud account containing the sound clips.';
+$string['clientsecret']             = 'SoundCloud client secret';
+$string['clientsecret_help']        = 'The client secret provided by SoundCloud.';
+$string['clientuser']               = 'SoundCloud account username';
+$string['clientuser_help']          = 'The username for the SoundCloud account containing the sound clips.';
 $string['description']              = 'Gallery description';
 $string['description_help']         = 'Provide a description which will appear above the sound clips contained in this gallery.';
 $string['modulename']               = 'SoundCloud Gallery';
@@ -24,12 +32,4 @@ $string['modulenameplural']         = 'SoundCloud Galleries';
 $string['pluginname']               = 'SoundCloud Gallery';
 $string['pluginadministration']     = 'SoundCloud administration';
 $string['soundcloud']               = 'SoundCloud';
-$string['soundcloudid']             = 'SoundCloud client';
-$string['soundcloudid_help']        = 'The client detail provided by SoundCloud.';
 $string['soundcloudname']           = 'Gallery name';
-$string['soundcloudpassword']       = 'SoundCloud account password';
-$string['soundcloudpassword_help']  = 'The password for the SoundCloud account containing the sound clips.';
-$string['soundcloudsecret']         = 'SoundCloud client secret';
-$string['soundcloudsecret_help']    = 'The client secret provided by SoundCloud.';
-$string['soundclouduser']           = 'SoundCloud account username';
-$string['soundclouduser_help']      = 'The username for the SoundCloud account containing the sound clips.';
