@@ -18,3 +18,12 @@
 
 require_once($CFG->dirroot . '/mod/soundcloud/soundcloudlib.php');
 
+function mod_soundcloud_authenticate()
+{
+    $client = new Services_Soundcloud($clientId, $clientSecret, $redirectUrl);
+}
+
+function mod_soundcloud_upload_file()
+{
+
+}
