@@ -34,4 +34,7 @@ $string['modulenameplural']         = 'SoundCloud Galleries';
 $string['pluginname']               = 'SoundCloud Gallery';
 $string['pluginadministration']     = 'SoundCloud administration';
 $string['soundcloud']               = 'SoundCloud';
+$string['soundcloud:addinstance']   = 'Add an instance of the SoundCloud shared repository';
+$string['soundcloud:upload']        = 'Upload a file to the gallery';
+$string['soundcloud:view']          = 'View SoundCloud galleries';
 $string['soundcloudname']           = 'Gallery name';

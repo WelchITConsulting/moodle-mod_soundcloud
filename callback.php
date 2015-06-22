@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Copyright (C) 2015 Welch IT Consulting
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,20 +14,21 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Filename : callback
+ * Author   : John Welch <jwelch@welchitconsulting.co.uk>
+ * Created  : 01 Jun 2015
  */
 
-defined('MOODLE_INTERNAL') || die();
+require_once('../../config.php');
+require_once($CFG->dirroot . '/soundcloud/lib.php');
 
-//if ($ADMIN->fulltree) {
-//    require_once($CFG->dirroot . '/mod/soundcloud/lib.php');
+require_login();
 
-//    $settings->add(new admin_setting_configtext('mod_soundcloud/id',
-//                   get_string('clientid', 'soundcloud'),
-//                   get_string('configclientid', 'soundcloud'), '',
-//                   PARAM_TEXT, 40));
-//
-//    $settings->add(new admin_setting_configtext('mod_soundcloud/secret',
-//                   get_string('clientsecret', 'soundcloud'),
-//                   get_string('configclientsecret', 'soundcloud'), '',
-//                   PARAM_TEXT, 40));
-//}
+$id = required_param('id', PARAM_INT);
+
+header('Cache-Control: no-cache, must-revalidate');
+header('Expires: Thu, 1 Jan 2015 01::00:00 GMT');
+
+core_php_time_limit::raise();
+

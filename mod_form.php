@@ -43,17 +43,17 @@ class mod_soundcloud_mod_form extends moodleform_mod
         // Section for the SoundCloud access settings
         $mform->addElement('header', 'soundcloud', get_string('soundcloud', 'soundcloud'));
 
-//        $mform->addElement('text', 'clientid', get_string('clientid', 'soundcloud'), array('size' => '40'));
-//        $mform->setType('clientid', PARAM_TEXT);
-//        $mform->addHelpButton('clientid', 'clientid', 'soundcloud');
-//        $mform->addRule('clientid', null, 'required', null, 'client');
-//        $mform->addRule('clientid', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');
-//
-//        $mform->addElement('text', 'clientuser', get_string('clientsecret', 'soundcloud'), array('size' => '40'));
-//        $mform->setType('clientsecret', PARAM_TEXT);
-//        $mform->addHelpButton('clientsecret', 'clientsecret', 'soundcloud');
-//        $mform->addRule('clientsecret', null, 'required', null, 'client');
-//        $mform->addRule('clientsecret', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');
+        $mform->addElement('text', 'clientid', get_string('clientid', 'soundcloud'), array('size' => '40'));
+        $mform->setType('clientid', PARAM_TEXT);
+        $mform->addHelpButton('clientid', 'clientid', 'soundcloud');
+        $mform->addRule('clientid', null, 'required', null, 'client');
+        $mform->addRule('clientid', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');
+
+        $mform->addElement('text', 'clientuser', get_string('clientsecret', 'soundcloud'), array('size' => '40'));
+        $mform->setType('clientsecret', PARAM_TEXT);
+        $mform->addHelpButton('clientsecret', 'clientsecret', 'soundcloud');
+        $mform->addRule('clientsecret', null, 'required', null, 'client');
+        $mform->addRule('clientsecret', get_string('maximumchars', '', 40), 'maxlength', 40, 'client');
 
         // Display the redirect URI to be entered
 

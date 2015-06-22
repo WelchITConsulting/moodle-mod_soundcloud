@@ -19,9 +19,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$module->version   = 2015052505;
-$module->requires  = 2013110500;
+$module->version   = 2015060100;
+$module->requires  = 2015051100;
 $module->component = 'mod_soundcloud';
 $module->cron      = 0;
 $module->maturity  = MATURITY_BETA;
-$module->release   = '0.1.0 (Build: 2015041600)';
+$module->release   = '0.1.10 (Build: 2015060100)';

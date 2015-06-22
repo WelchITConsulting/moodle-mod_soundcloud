@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Copyright (C) 2015 Welch IT Consulting
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,20 +14,16 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Filename : gallery
+ * Author   : John Welch <jwelch@welchitconsulting.co.uk>
+ * Created  : 07 Jun 2015
  */
 
-defined('MOODLE_INTERNAL') || die();
-
-//if ($ADMIN->fulltree) {
-//    require_once($CFG->dirroot . '/mod/soundcloud/lib.php');
-
-//    $settings->add(new admin_setting_configtext('mod_soundcloud/id',
-//                   get_string('clientid', 'soundcloud'),
-//                   get_string('configclientid', 'soundcloud'), '',
-//                   PARAM_TEXT, 40));
-//
-//    $settings->add(new admin_setting_configtext('mod_soundcloud/secret',
-//                   get_string('clientsecret', 'soundcloud'),
-//                   get_string('configclientsecret', 'soundcloud'), '',
-//                   PARAM_TEXT, 40));
-//}
+class mod_soundcloud_gallery
+{
+    public function __construct($id)
+    {
+        ;
+    }
+}
